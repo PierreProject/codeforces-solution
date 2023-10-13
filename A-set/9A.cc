@@ -14,11 +14,13 @@ void solve() {
 	int Y, W;
 	cin >> Y >> W;
 
-	int max_roll = max(Y, W);
+	int max_roll = max(Y, W); // Maximum roll between Yakko and Wakko
 	int favorable_outcomes = 6 - max_roll + 1;	// Number of outcomes where Dot wins
 
+	// Calculate GCD of favorable_outcomes and 6 to simplify the fraction
 	int common_divisor = gcd(favorable_outcomes, 6);
 
+	// Simplify the fraction and print the result
 	int numerator = favorable_outcomes / common_divisor;
 	int denominator = 6 / common_divisor;
 
